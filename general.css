@@ -1,0 +1,367 @@
+body {
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(44,44,44) !important;
+}
+
+main {
+    background-image: url("https://newvisionlearning.org/wp-content/uploads/2019/01/A-New-Vision-of-SAT-Prep-for-the-New-Year.jpg");
+    background-size: cover;
+    background-position: center 0%;
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    width: 100vw;
+    transition: transform 450ms cubic-bezier(0.25, 0.55, 0.38, .97);
+}
+.Header {
+    background-color: rgb(44,44,44);
+    height: 125px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
+    border: solid;
+    border-color: aliceblue;
+}
+
+.Header-text {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+}
+
+#nav-toggle > i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    color: rgb(0, 0, 0);
+    font-size: 1.8rem;
+    opacity: 0; 
+    transition: opacity, transform;
+    transition-timing-function: ease;
+    transition-duration: 450ms;
+}
+
+body:not([data-nav="true"]) > #nav-toggle:hover > .open {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(180deg);
+}
+
+
+body[data-nav="true"] > #nav-toggle > .close {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.5) rotate(-180deg);
+}
+
+
+body[data-nav = "true"] > main {
+    transform: translateY(100%);
+}
+
+#nav-toggle {
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80%;
+    z-index: 3;
+    outline: none; 
+    transition: background-color, scale, transform;
+    transition-duration: 0.25s;
+    transition-timing-function: ease;
+    cursor: pointer;
+}
+
+#nav-toggle:hover {
+    transform: translateX(-50%);
+    scale: 1.15;
+    box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.5); 
+}
+
+#nav-toggle:active {
+    transform: translateX(-50%);
+    scale: 0.87;
+}
+
+body[data-nav="true"] > #nav-toggle {
+    background-color: rgb(255, 255, 255);
+}
+
+#navigation-links > .navigation-link{
+    text-decoration: none;
+}
+
+#navigation-links > .navigation-link > .container > .nav-label {
+    color: rgb(14, 163, 189);
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0rem;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.15s, text-decoration 0.15s;
+}
+
+.nav-label:hover {
+    opacity: 0.75;
+    text-decoration: underline;
+}
+
+.nav-label:active {
+    opacity: 0.5;
+    color: rgb(13, 160, 185);
+}
+
+#navigation-links > .navigation-link > .container > .nav-image {
+    width: max(20vw, 150px);
+    aspect-ratio: 1.5 / 1;  
+    border-radius: 0.5rem;
+    margin-top: 0.75rem;
+    object-fit: cover;
+    border-color: rgb(255, 255, 255);
+    border: solid;
+    transition: scale 0.25s, box-shadow 0.25s;
+}
+
+.container {
+    width: 100%;
+}
+
+.nav-image:hover {
+    scale: 1.1;
+}
+
+nav {
+    height: 100vh;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+}
+
+#navigation-links {
+    display: flex;
+    gap: clamp(1rem, 2vw, 2rem);
+    margin-top: clamp(2rem, 2vw, 3rem);
+    padding: 0rem clamp(1rem, 2vw, 2rem);
+    transform: translateY(100%) scale(1);
+    transition: transform 500ms cubic-bezier(.13,.53,.38,.97); 
+    justify-content: center;
+}
+
+.pricetag {
+    color: gold;
+    font-size: 25px;
+}
+
+#vocab-link {
+    top: 10px;
+}
+
+#vocab-link > i {
+    color: rgb(94, 106, 210);
+}
+
+#bluebook-link {
+    top: 45px;
+}
+
+#bluebook-link > i {
+    color: blue;
+}
+
+#quizlet-link {
+    top: 80px;
+}
+
+#quizlet-link > i {
+    color: aqua;
+}
+
+.meta-link {
+    align-items: center;
+    backdrop-filter: blur(3px);
+    background-color: rgba(12, 12, 12, 0.9);
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;  
+    display: inline-flex;
+    gap: 5px;
+    right: 15px;
+    padding: 10px 20px;
+    position: fixed;
+    transition: background-color 350ms, border-color 350ms, text-decoration 0.15s;
+    z-index: 100;
+    text-decoration: none; 
+}
+
+.meta-link:hover {
+    background-color: rgb(40, 40, 40);
+    text-decoration: none;
+}
+
+.metal-link:active {
+    background-color: rgb(110, 110, 110);
+    text-decoration: none;
+    scale: 0.9;
+}
+  
+.meta-link > i, .meta-link > span {
+    height: 10px;
+    line-height: 10px;
+}
+  
+.meta-link > span {
+    color: gray;
+    font-family: "Rubik", sans-serif;
+    transition: color 600ms;
+}
+
+#Erica-Meltzer {
+    top: 10px;
+}
+
+.adjustment  {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    transition: transform 0.1s;
+    border: solid;
+    border-color: black;
+    transform: translateY(-80px);
+}
+
+.adjustment:hover {
+    transform: translate(8px, -72px);
+}
+
+.sub-link {
+    align-items: center;
+    cursor: pointer;  
+    display: flex;
+    position: fixed;
+    transition: transform 1s;
+    justify-content: center;
+    gap: 10px;
+    left: 0px;
+    top:15px;
+    transform: translateX(50%);
+    right: 50%;
+}
+
+.behind {
+    background-color: black;
+    transform: translate(10px, 10px);
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    z-index: 50;
+}
+
+#Erica-Meltzer2 {
+    top: 10px;
+}
+
+.adjustment2  {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    gap: 5px;
+    border: solid;
+    border-color: black;
+    transition: transform 0.1s;
+    transform: translateY(-80px);
+}
+
+.adjustment2:hover {
+    transform: translate(8px, -72px)
+}
+
+.behind2 {
+    background-color: black;
+    transform: translate(10px, 10px);
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    z-index: 50;
+}
+
+#Math-Panda {
+    top: 10px;
+}
+
+.adjustment3  {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    transition: opacity 0.15ms;
+    transform: translateX();
+    border: solid;
+    border-color: black;
+    transition: transform 0.1s;
+    transform: translateY(-80px);
+}
+
+.adjustment3:hover {
+    transform: translate(8px, -72px)
+}
+
+.behind3 {
+    background-color: black;
+    transform: translate(10px, 10px);
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    z-index: 50;
+}
+
+.index {
+    z-index: 100;
+}
+
+.container .tooltip {
+    font-family: Roboto, Arial;
+    position: absolute;
+    background-color: rgb(10, 73, 145);
+    color: rgb(255, 255, 255);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    font-size: 25px;
+    transform: translate(50%, -300px);
+    right: 50%;
+}
+
+.container:hover .tooltip {
+    opacity: 1;
+}
+
+
+
+
+
