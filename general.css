@@ -355,6 +355,7 @@ nav {
     font-size: 25px;
     transform: translate(50%, -300px);
     right: 50%;
+    box-shadow: 2px, 2px, 2px, 2px rgba(0, 0, 255, 1);
 }
 
 .container:hover .tooltip {
