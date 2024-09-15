@@ -104,6 +104,7 @@ body[data-nav="true"] > #nav-toggle {
 
 #navigation-links > .navigation-link{
     text-decoration: none;
+    padding-bottom: 100px;
 }
 
 #navigation-links > .navigation-link > .container > .nav-label {
