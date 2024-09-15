@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-    height: 150vh;
+    height: 125vh;
     width: 100vw;
     background-color: rgb(44,44,44) !important;
 }
@@ -11,7 +11,7 @@ main {
     background-position: center 0%;
     position: relative;
     z-index: 2;
-    height: 150vh;
+    height: 125vh;
     width: 100vw;
     transition: transform 450ms cubic-bezier(0.25, 0.55, 0.38, .97);
 }
@@ -148,7 +148,7 @@ body[data-nav="true"] > #nav-toggle {
 }
 
 nav {
-    height: 150vh;
+    height: 125vh;
     width: 100%;
     left: 0px;
     top: 0px;
