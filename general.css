@@ -59,7 +59,7 @@ main {
     justify-content: center;
     align-items: center;
     padding-top: 3px;
-    right: 50%;
+    right: 100%;
     transform: translateX(50%);
 }
 
