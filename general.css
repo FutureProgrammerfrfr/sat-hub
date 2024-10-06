@@ -52,6 +52,13 @@ main {
     padding-left: 50px;
 }
 
+.footer-text {
+    display:flex;
+    color:white;
+    justify-content: center;
+    align-items: center;
+}
+
 #nav-toggle > i {
     position: absolute;
     left: 50%;
