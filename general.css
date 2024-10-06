@@ -41,7 +41,7 @@ main {
     position: fixed;
     left: 0px;
     right: 0px;
-    z-index: 10;
+    z-index: 20;
 }
 
 .Header-text {
