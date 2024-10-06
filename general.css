@@ -38,7 +38,7 @@ main {
     margin-bottom: 0px;
     display:flex;
     align-itmes: center;
-    position:fixed;
+    position:aboslute;
     left: 0px;
     right: 0px;
     z-index: 10;
